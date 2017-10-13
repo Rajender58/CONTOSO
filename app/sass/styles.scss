@@ -1,0 +1,140 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400,600,700);
+
+// Partials
+@import "base/variables";
+@import "base/mixins";
+
+// Page Components
+@import "components/homepage";
+
+// styling starts from here
+
+body{
+  font-family:$font-stack;
+  background-color: $bg-color;
+}
+
+header {
+  background: $gray-darker;
+  color:$black-color;
+  &.masthead{
+    .bannercontainer {
+      width:100%;
+      position:relative;
+      padding:0;
+    }
+    .banner{
+      width:100%;
+      position:relative;
+    }
+    h1{
+      text-transform: uppercase;
+      font-size: 55px;
+      font-weight: bold;
+    }
+    .tp-bannertimer{
+      background:url('../rs-plugin/assets/timerdot2.png');
+      height: 3px;
+    }
+    .tp-caption{
+      font-family: $font-stack;
+      a{
+        color: $white-color;
+        &:hover{
+          color:$gray-lighter;
+        }	
+      }
+      &.italic{
+        font-style: italic;
+      }
+      .light_bold{
+        font-weight: 300;
+        font-size: 30px;
+        color:$white-color;
+        padding-top: 10px;
+        text-align: center;
+      }
+      &.large_white_light{
+        font-weight: 300;
+        font-size: 40px;
+        color:$white-color;
+      }
+      .btn.btn-naked{
+        background:rgba($white-color, 0.3);
+        font-size:30px;
+        font-style: italic;
+        font-weight: $weight-light;
+      }
+    }
+    h1,h2,h3{
+      color: $white-color;
+    }
+  }
+}
+
+#wrap{
+  padding-top:50px;
+  &.home{
+    padding:0;
+  }
+}
+
+section.well{
+  border:none;
+  @include border-radius(0);
+  background-image: url(../img/samples/bk-social.jpg);
+  @extend .backgroundCover;
+  background-attachment: fixed;
+  position: relative;
+  padding: 45px;
+  &:before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    right:0;
+    left: 0;
+    bottom:0;
+    @include transparent($black-color, 0.65);
+  }
+  h2{
+    text-transform: uppercase;
+    color: $white-color;
+    font-weight:bold;
+  }
+  .breadcrumb{
+    background:none;
+    float: right;
+    margin-bottom: 0;
+    padding: 28px 15px 5px 15px;
+    .active{
+      color: $white-color;
+    }
+  }
+}
+
+.btn.btn-primary{
+  background:$brand-primary;
+  border:none;
+  text-transform:uppercase;
+  @include transition;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 15px 40px;
+  &:hover{
+    background: darken($brand-primary, 5%);
+  }
+}
+
+.btn.btn-empty{
+  background:none;
+  border:2px solid $white-color;
+  text-transform:uppercase;
+  color:$white-color;
+  @include border-radius(4px);
+  @include transition;
+  &:hover{
+    background: $white-color;
+    color: $brand-primary;
+  }
+}
+

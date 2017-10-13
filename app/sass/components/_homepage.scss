@@ -1,0 +1,474 @@
+/* styling navbar */
+#nav {
+  width: 100%;
+  position:static;
+  top:-32px;
+  margin-bottom: 0;
+  background:$brand-red;
+  min-height:50px;
+
+  &.affix {
+    position: fixed;
+    top: 0;
+    z-index:999;
+    @include transition;
+  }
+  .navbar-brand{
+    img{
+      margin-top: 0px;
+    }
+    padding:0;
+    height: 49px;
+    line-height: 49px;
+  }
+  &.navbar-fixed-top{
+    position: fixed;
+    top:0;
+  }
+  .navbar-toggle{
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 9px;
+    i{
+      font-size:2em;
+    }
+  }
+  .navbar-nav{
+    margin-left: 100px;
+
+    li{
+      a{
+        text-transform: uppercase;
+        padding-top:15px;
+        padding-bottom: 14px;
+        font-family: $font-stack;
+        font-weight: 100;
+        color: $white-color;
+        @include transition;
+        &:hover{
+          text-decoration: underline;
+          background:none;
+        }
+      }
+      &.social-nav{
+        margin: 10px 0 4px 10px;
+        padding-left: 15px;
+        @media (min-width: 768px) {
+          position: absolute;
+          right: 0;
+        }
+        a{
+          text-transform: capitalize;
+          float: left;
+          padding: 5px 10px;
+          i{
+            font-size: 1.33333333em;
+          }
+          .media-object {
+            @include border-radius(50%);
+            width: 30px;
+            margin-top: -4px;
+            margin-left: -12px;
+          }
+        }
+      }
+      &.active{
+        a{
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+}
+
+.sub-nav {
+  .navbar-nav{
+    li{
+      a{
+        text-transform: uppercase;
+        padding-top:15px;
+        padding-bottom: 14px;
+        font-family: $font-stack;
+        font-weight: 100;
+        color: $white-color;
+        @include transition;
+        &:hover{
+          text-decoration: underline;
+          background:none;
+        }
+      }
+      &.logo-text{
+        padding: 25px 0;
+        a{
+          text-transform: uppercase;
+          float: left;
+          font-weight: 700;
+          padding: 5px 10px;
+          i{
+            font-size: 1.33333333em;
+          }
+        }
+      }
+      &.logo-text {
+        background:$brand-red;
+      }
+      &.active{
+        a{
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+  .breadcrumb {
+    background-color: transparent;
+    @media (min-width: 767px) {
+      margin-top: 50px;
+    }
+    margin-bottom: 0;
+    font-size: 1.11em;
+    a {
+      color: $gray-light;
+    }
+  }
+  .side-block{
+    @media (min-width: 767px) {
+      margin-top: 50px;
+    }
+    &.search{
+      input.form-control{
+        border: 1px solid $gray-light;
+        height: 30px;
+        border-radius: 0;
+      }
+      button{
+        border: none;
+        background: none;
+        i{
+          top: 0;
+          right:0;
+        }
+      }
+    }
+    span.divider{
+      margin: 40px 0;
+      display: block;
+    }
+    h4{
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+    p{
+      color: $gray-light;
+    }
+    ul{
+      padding-left: 20px;
+      margin-bottom: 20px;
+      li{
+        margin: 5px 0;
+        a{
+          color: $gray-light;
+        }
+      }
+    }
+    .media{
+      a.pull-left{
+        margin-right: 10px;
+      }
+      .media-object{
+        padding: 0;
+        height: 60px;
+        width: 60px;
+        @include border-radius(0);
+        border:none;
+      }
+      .media-body{
+        font-size: 13px;
+        line-height: 16px;
+        color: $gray-light;
+        a{
+          display: block;
+          margin-top: 7px;
+        }
+      }
+    }
+    a.tag{
+      border: 2px solid $gray-light;
+      color:$gray-light;
+      padding: 8px;
+      @include border-radius(5px);
+      margin: 5px;
+      text-transform: lowercase;
+      display: inline-block;
+      &:hover{
+        border-color:$brand-primary;
+        color:$black-color;
+      }
+    }
+  }
+  .tools.navbar-nav {
+    position: absolute;
+    right: -82px;
+
+    a {
+      color:$black-color;
+      font-size: 0.7em;
+      padding: 5px 15px 0 0;
+    }
+  }
+}
+
+
+// media queriess
+@media (max-width: 767px) {
+  #nav .navbar-nav {
+    margin-left: 0;
+    li a{
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
+
+  .navbar-brand{
+    margin-left:20px;
+  }
+
+  header {
+    &.masthead{
+      h1{
+        font-size: 30px;
+      }
+      h2{
+        font-size: 16px;
+        margin-top: 20px;
+      }
+      h3{
+        font-size: 14px;
+      }
+      .tp-caption a{
+        color: $white-color;
+      }
+      h1,h2,h3{
+        color: $white-color;
+      }
+    }
+  }
+
+}
+section.well.info-banner-section {
+  padding-bottom: 0;
+  height: 300px;
+
+  .info-banner {
+    background-color: rgba(99, 102, 99, 0.8);
+    position: relative;
+    bottom: -94px;
+  }
+  .first {
+    color: #f4f4f4;
+    margin:10px;
+    border-right: solid 1px $gray-border;
+    width: 48%;
+
+    p{
+      font-size: $font-size-h2; 
+      font-weight: $weight-normal;		
+    }
+    a {
+      color: $bg-color;
+      display: inline-block;
+      padding: 10px 15px;
+      border: solid 1px $gray-border;
+
+    }
+  }
+  .info {
+    padding: 25px 20px;
+
+    img {
+      display: inline-block;
+      width: 135px;
+      padding-right: 25px;
+    }
+    p{  color:$bg-color;
+        display: inline-block;
+        width: 70%;
+    }
+  }
+}
+// Middle container.
+.middle-container {
+  .first-row {
+    h3 span {
+      color:$brand-red;
+    }
+    p {
+      color: $gray-light;
+    }
+  }
+  .last-row {
+    height: 170px;
+
+    h3 {
+      color:#a3a3a3;
+    }
+    p {
+      color: $gray-light;
+    }
+  }
+}
+
+// Bottom Middle Container.
+.bottom-middle-container {
+  background-color: #363636;
+
+  .btn-group {
+    vertical-align: top;
+
+    .btn-primary {
+      border-radius: 0;
+      border-right: 20px solid #363636 !important;
+      text-transform: capitalize;	
+      padding: 20px 25px;
+      font-weight: $weight-normal;
+      font-size: 1.2em;
+
+    }
+  }
+  .active-border {
+    border: solid 4px #22a3df;
+    position: relative;
+    bottom: -31px;
+    width: 266px;
+    left: -25px;
+  }
+
+  #btn-tab2 {
+    background-color: #4d5d6e;
+  }
+  #btn-tab3 {
+    background-color: #d49561;
+  }
+  #btn-tab4 {
+    background-color: #c75d5d;
+  }
+
+  .well {
+    padding: 20px 30px;
+    height: 300px;
+    background-color: #3b3b3b;
+    border: none;
+    border-top: solid 1px #22a3df;
+    margin-top: 10px;
+    color: $bg-color;
+
+    h3 {
+      color:#a3a3a3;
+    }
+    p{
+      color: $bg-color;
+      font-weight: $weight-normal;		
+    }
+    a {
+      color: $bg-color;
+      display: inline-block;
+      padding: 10px 15px;
+
+
+      &.download {
+        border: solid 1px $gray-border;
+        background-color: #636663;
+      }
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+
+}
+
+// Our Experts.
+.our-experts {
+  padding-bottom: 40px;
+  border-bottom: solid 1px #d6d6d6;
+}
+.profile{
+
+  h2{
+    font-size: 1.33em;
+    margin:10px 0 0 0;
+    margin: 0;
+    background-color: $white-color;
+    padding: 15px 15px 5px 15px;
+    width: 106%;
+    text-transform: uppercase;
+  }
+  h3{
+    font-size: 1em;
+    font-weight: lighter;
+    margin: 0;
+    background-color: $white-color;
+    padding: 0 15px 15px;
+    width: 106%;
+  }
+  .img-box{
+    opacity: 1;
+    display: block;
+    position: relative;
+    width: 180px;
+  }
+}
+
+// Get in touch.
+#get-in-touch{
+  padding-bottom: 30px;
+  .container {
+    padding: 0;
+    @include border-radius(0);
+  }
+  h3  {
+    padding-bottom: 15px;
+  }
+  .form-control{
+    padding: 10px;
+    @include border-radius(0);
+  }
+  select.form-control{
+    height: 40px;
+    padding: 5px;
+  }
+  button {
+    @include border-radius(0);
+    border: none;
+    background: #636663;
+    padding: 15px 35px;
+    color: $white-color;
+
+  }
+}
+
+// Footer 
+.unstyled
+{
+  list-style:none;
+
+}
+.header {
+  font-size: 1.5em;
+}
+footer#site-footer{
+  padding: 40px 0;
+  background: #363636;
+  color:#9c9c9c;
+
+  span.divider{
+    float: none;
+  }
+
+  a{
+    font-size: 1em;
+    color:#9c9c9c;
+    img.top{
+      margin:20px 0;
+    }
+  }
+}
