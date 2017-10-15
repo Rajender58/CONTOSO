@@ -40,12 +40,18 @@
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 9px;
+  border: solid 1px white;
 }
 #nav .navbar-toggle i {
   font-size: 2em;
 }
-#nav .navbar-nav {
-  margin-left: 100px;
+#nav .icon-bar {
+  border: solid 1px white;
+}
+@media (min-width: 990px) {
+  #nav .navbar-nav {
+    margin-left: 100px;
+  }
 }
 #nav .navbar-nav li a {
   text-transform: uppercase;
@@ -93,6 +99,10 @@
 }
 #nav .navbar-nav li.active a {
   color: #22a3df;
+}
+
+.hidden-xs {
+  overflow: hidden;
 }
 
 .sub-nav .navbar-nav li a {
@@ -223,7 +233,21 @@
 }
 .sub-nav .tools.navbar-nav {
   position: absolute;
-  right: -82px;
+  display: none;
+}
+@media (min-width: 768px) {
+  .sub-nav .tools.navbar-nav {
+    right: -15px;
+    display: inline-block;
+  }
+}
+@media (min-width: 1025px) {
+  .sub-nav .tools.navbar-nav {
+    right: -82px;
+  }
+}
+.sub-nav .tools.navbar-nav i {
+  margin-right: 5px;
 }
 .sub-nav .tools.navbar-nav a {
   color: #000000;
@@ -263,18 +287,45 @@
 }
 section.well.info-banner-section {
   padding-bottom: 0;
-  height: 300px;
+}
+@media (min-width: 990px) {
+  section.well.info-banner-section {
+    height: 300px;
+  }
 }
 section.well.info-banner-section .info-banner {
   background-color: rgba(99, 102, 99, 0.8);
   position: relative;
-  bottom: -94px;
+}
+@media (min-width: 768px) and (max-width: 990px) {
+  section.well.info-banner-section .info-banner {
+    width: auto;
+  }
+}
+@media (min-width: 990px) {
+  section.well.info-banner-section .info-banner {
+    bottom: -55px;
+  }
+}
+@media (min-width: 1025px) {
+  section.well.info-banner-section .info-banner {
+    bottom: -94px;
+  }
 }
 section.well.info-banner-section .first {
   color: #f4f4f4;
   margin: 10px;
-  border-right: solid 1px #a5a6a4;
-  width: 48%;
+}
+@media (min-width: 768px) {
+  section.well.info-banner-section .first {
+    border-right: solid 1px #a5a6a4;
+    width: 47%;
+  }
+}
+@media (min-width: 1025px) {
+  section.well.info-banner-section .first {
+    width: 48%;
+  }
 }
 section.well.info-banner-section .first p {
   font-size: 30px;
@@ -297,7 +348,16 @@ section.well.info-banner-section .info img {
 section.well.info-banner-section .info p {
   color: #f4f4f4;
   display: inline-block;
-  width: 70%;
+}
+@media (min-width: 768px) {
+  section.well.info-banner-section .info p {
+    width: 65%;
+  }
+}
+@media (min-width: 1025px) {
+  section.well.info-banner-section .info p {
+    width: 70%;
+  }
 }
 
 .middle-container .first-row h3 span {
@@ -337,6 +397,16 @@ section.well.info-banner-section .info p {
   width: 266px;
   left: -25px;
 }
+@media (min-width: 768px) {
+  .bottom-middle-container .active-border {
+    width: 216px;
+  }
+}
+@media (min-width: 1025px) {
+  .bottom-middle-container .active-border {
+    width: 266px;
+  }
+}
 .bottom-middle-container #btn-tab2 {
   background-color: #4d5d6e;
 }
@@ -348,12 +418,16 @@ section.well.info-banner-section .info p {
 }
 .bottom-middle-container .well {
   padding: 20px 30px;
-  height: 300px;
   background-color: #3b3b3b;
   border: none;
   border-top: solid 1px #22a3df;
   margin-top: 10px;
   color: #f4f4f4;
+}
+@media (min-width: 990px) {
+  .bottom-middle-container .well {
+    height: 300px;
+  }
 }
 .bottom-middle-container .well h3 {
   color: #a3a3a3;
@@ -386,8 +460,17 @@ section.well.info-banner-section .info p {
   margin: 0;
   background-color: #FFFFFF;
   padding: 15px 15px 5px 15px;
-  width: 106%;
   text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .profile h2 {
+    width: 106%;
+  }
+}
+@media (min-width: 1025px) {
+  .profile h2 {
+    width: 106%;
+  }
 }
 .profile h3 {
   font-size: 1em;
@@ -395,13 +478,31 @@ section.well.info-banner-section .info p {
   margin: 0;
   background-color: #FFFFFF;
   padding: 0 15px 15px;
-  width: 106%;
+}
+@media (min-width: 768px) {
+  .profile h3 {
+    width: 106%;
+  }
+}
+@media (min-width: 1025px) {
+  .profile h3 {
+    width: 106%;
+  }
 }
 .profile .img-box {
   opacity: 1;
   display: block;
   position: relative;
-  width: 180px;
+}
+@media (min-width: 990px) {
+  .profile .img-box {
+    width: 145px;
+  }
+}
+@media (min-width: 1025px) {
+  .profile .img-box {
+    width: 180px;
+  }
 }
 
 #get-in-touch {
